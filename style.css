@@ -1,0 +1,105 @@
+body {
+    background-color: black;
+    font-family: arial;
+    background-image: url(Background/background-pixel.png);
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+main {
+    display: grid;
+    grid-template-columns: 375px 375px;
+    column-gap: 50px;
+    justify-content: center;
+}
+.warrior-wrapper {
+    display: grid;
+    width: 375px;
+    justify-items: center;
+    position: relative;
+}
+.warrior-avatar {
+    height: 500px;
+}
+.spell-menu {
+    margin-bottom: 10px;
+    display: none;
+    position: absolute;
+    top: 450px;
+}
+.warrior-moves button, .spell-menu button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px;
+    transition: box-shadow 0.1s;
+}
+.warrior-moves button:hover, .spell-menu button:hover {
+    background-color: rgb(210, 210, 210);
+}
+.warrior-moves button:active, .spell-menu button:active {
+    box-shadow: 3px 3px 3px;
+}
+.warrior-stats {
+    display: flex;
+    flex-direction: column;
+}
+.health-container, .mana-container, .shield-container {
+    display: flex;
+    color: white;
+    font-weight: bolder;
+    align-items: center;
+}
+.health-bar {
+    accent-color: green;
+    margin-left: 10px;
+}
+.mana-bar {
+    margin-left: auto;
+}
+.shield-bar {
+    accent-color: gray;
+    margin-left: auto;
+}
+.atkbutt {
+    width: 70px;
+}
+.closespellmenubutt {
+    width: 92px;
+}
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 100px;
+}
+.stat-amount {
+    width: 30px;
+    margin-left: 10px;
+}
+.battle-cursor {
+    height: 200px;
+    position: absolute;
+    top: -40px;
+    left: 50px;
+    display: inline-block;
+    animation: cursor-float 1s infinite;
+    animation-direction: alternate;
+}
+@keyframes cursor-float {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+.battle-log {
+    color: white;
+    margin: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 300px;
+    font-weight: bold;
+    position: absolute;
+}

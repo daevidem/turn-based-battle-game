@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Turn Based Battle</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <aside class="js-battle-log battle-log"></aside>
+        <main>
+            <div class="warrior-wrapper">
+                <img class="js-battle-cursor-wizard battle-cursor" src="Other/battlecursor.png">
+                <img class="warrior-avatar" src="Avatars/pixelwizard.png">
+                <div class="spell-menu js-spell-menu-wizard">
+                    <button class="js-actionbtn" 
+                    data-player="wizard" 
+                    data-action="arcaneBlast" 
+                    title="Deal 30 damage. Costs 40 mana.">
+                    ARCANE BLAST</button>
+                    <button class="js-actionbtn" 
+                    data-player="wizard" data-action="curseOfDecay" 
+                    title="Deal 8 damage per turn. Lasts 4 turns. Costs 35 mana.">
+                    CURSE OF DECAY</button>
+                    <button class="js-actionbtn" 
+                    data-player="wizard" 
+                    data-action="siphon" 
+                    title="Deal 20 damage and gain 20 health. Costs 45 mana.">
+                    SIPHON</button>
+                </div>
+                <div class="warrior-moves">
+                    <button class="js-actionbtn js-atkbutt-wizard atkbutt" 
+                    data-player="wizard" 
+                    data-action="attackEnemy" 
+                    title="Basic attack. Deals 10 damage by default.">
+                    ATTACK</button>
+                    <button class="js-actionbtn" 
+                    data-player="wizard" 
+                    data-action="raiseShield" 
+                    title="Gain 20 shield. Costs 20 mana.">
+                    RAISE SHIELD</button>
+                    <button class="js-actionbtn js-openspellmenu-wizard openspellmenubutt" 
+                    data-player="wizard" 
+                    data-action="openSpellMenu" 
+                    title="Opens spell menu.">
+                    USE SPELL</button>
+                    <button class="js-actionbtn" 
+                    data-player="wizard" 
+                    data-action="upgradeWeapon" 
+                    title="Upgrade basic attack by 3 points.">
+                    UPGRADE</button>
+                </div>
+                <div class="warrior-stats">
+                    <div class="health-container">
+                        <p>Health:</p>
+                        <progress class="js-health-wizard health-bar" value="100" max="100"></progress>
+                        <p class="js-health-amount-wizard stat-amount">100</p>
+                    </div>
+                    <div class="mana-container">
+                        <p>Mana:</p>
+                        <progress class="js-mana-wizard mana-bar" value="100" max="100"></progress>
+                        <p class="js-mana-amount-wizard stat-amount">100</p>
+                    </div>
+                    <div class="shield-container">
+                        <p>Shield:</p>
+                        <progress class="js-shield-wizard shield-bar" value="0" max="100"></progress>
+                        <p class="js-shield-amount-wizard stat-amount">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="warrior-wrapper">
+                <img class="js-battle-cursor-dragon battle-cursor" src="Other/battlecursor.png">
+                <img class="warrior-avatar"src="Avatars/pixeldragon.png">
+                <div class="spell-menu js-spell-menu-dragon">
+                    <button class="js-actionbtn" 
+                    data-player="dragon" 
+                    data-action="infernoBreath" 
+                    title="Deal 20 damage. Apply burn effect that lasts 2 turns and deals 5 damage per turn. Costs 40 mana.">
+                    INFERNO BREATH</button>
+                    <button class="js-actionbtn" 
+                    data-player="dragon" 
+                    data-action="venomBite" 
+                    title="Deal 6 damage per turn. Lasts for 5 turns. Costs 35 mana.">
+                    VENOM BITE</button>
+                    <button class="js-actionbtn" 
+                    data-player="dragon" 
+                    data-action="scaleform" 
+                    title="Gain 50 shield. Costs 45 mana.">
+                    SCALEFORM</button>
+                </div>
+                <div class="warrior-moves">
+                    <button class="js-actionbtn js-atkbutt-dragon atkbutt" 
+                    data-player="dragon" 
+                    data-action="attackEnemy" 
+                    title="Basic attack. Deals 10 damage by deafult.">
+                    ATTACK</button>
+                    <button class="js-actionbtn" 
+                    data-player="dragon" 
+                    data-action="raiseShield" 
+                    title="Gain 20 shield. Costs 20 mana.">
+                    RAISE SHIELD</button>
+                    <button class="js-actionbtn js-openspellmenu-dragon openspellmenubutt" 
+                    data-player="dragon" 
+                    data-action="openSpellMenu" 
+                    title="Opens spell menu.">
+                    USE SPELL</button>
+                    <button class="js-actionbtn" 
+                    data-player="dragon" 
+                    data-action="upgradeWeapon" 
+                    title="Upgrade basic attack by 3 points.">
+                    UPGRADE</button>
+                </div>
+                <div class="warrior-stats">
+                    <div class="health-container">
+                        <p>Health:</p>
+                        <progress class="js-health-dragon health-bar" value="100" max="100"></progress>
+                        <p class="js-health-amount-dragon stat-amount">100</p>
+                    </div>
+                    <div class="mana-container">
+                        <p>Mana:</p>
+                        <progress class="js-mana-dragon mana-bar" value="100" max="100"></progress>
+                        <p class="js-mana-amount-dragon stat-amount">100</p>
+                    </div>
+                    <div class="shield-container">
+                        <p>Shield:</p>
+                        <progress class="js-shield-dragon shield-bar" value="0" max="100"></progress>
+                        <p class="js-shield-amount-dragon stat-amount">0</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <h1 class="js-game-result"></h1>
+        <script src="script.js"></script>
+    </body>
+</html>
